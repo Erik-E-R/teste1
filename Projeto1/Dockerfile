@@ -4,6 +4,10 @@ FROM maven:3.9.6-eclipse-temurin-21 AS builder
 WORKDIR /app
 
 COPY pom.xml .
+COPY . .
+
+RUN apt-get update && apt-get install -y file
+RUN file -i src/main/resources/application.properties
 
 # Compila o projeto e gera o JAR
 RUN mvn clean package -DskipTests
