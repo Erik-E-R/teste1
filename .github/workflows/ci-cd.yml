@@ -41,7 +41,7 @@ jobs:
 
     steps:
       - name: Simulate deploy to staging
-        run: echo "Deploying to staging using image: ${{ secrets.DOCKER_USERNAME }}/springboot-app:staging"
+        run: echo 'Deploying to staging using image:${{ secrets.DOCKER_USERNAME }}/springboot-app:staging'
 
   deploy-production:
     name: Deploy to Production
@@ -51,4 +51,4 @@ jobs:
 
     steps:
       - name: Simulate deploy to production
-        run: echo "Deploying to production using image: ${{ secrets.DOCKER_USERNAME }}/springboot-app:main"
+        run: echo 'Deploying to production using image:${{ secrets.DOCKER_USERNAME }}/springboot-app:main'
