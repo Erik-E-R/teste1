@@ -28,8 +28,8 @@ jobs:
       - name: Build and Push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: .
-          file: Projeto1/Dockerfile # ajuste aqui se o Dockerfile estiver dentro de Projeto1/
+          context: ./Projeto1
+          file: ./Projeto1/Dockerfile # ajuste aqui se o Dockerfile estiver dentro de Projeto1/
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/springboot-app:${{ github.ref_name }}
 
